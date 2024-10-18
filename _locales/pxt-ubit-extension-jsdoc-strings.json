@@ -1,0 +1,14 @@
+{
+  "DEVICE_RUNTIME": "device runtime",
+  "DEVICE_RUNTIME.RUNTIME_CODAL": "codal - micro:bit v2",
+  "DEVICE_RUNTIME.RUNTIME_DAL": "dal - micro:bit v1",
+  "DEVICE_RUNTIME.RUNTIME_SIMU": "simulator",
+  "MyEnum": "Use this file to define custom functions and blocks.\nRead more at https://makecode.microbit.org/blocks/custom",
+  "custom": "Custom blocks\nicon: a Unicode identifier for an icon from the Font Awesome icon set.\nhttp://fontawesome.io/icons",
+  "custom.bar": "Block definition from C++, no implementation for simulator\nhttps://makecode.com/simshim",
+  "custom.baz": "Using C++ in addition to the simulator implementation\nRead more at https://makecode.com/simshim\n@returns device runtime",
+  "custom.foo": "TODO: describe your function here",
+  "custom.foo|param|e": "describe parameter here",
+  "custom.foo|param|n": "describe parameter here, eg: 5",
+  "custom.foo|param|s": "describe parameter here, eg: \"Hello\""
+}
