@@ -3,7 +3,8 @@
     "version": "0.1.0-alpha",
     "description": "(description: this description is written in pxt.json)",
     "dependencies": {
-        "core": "*"
+        "core": "*",
+        "pxt-mbit-more-v2": "github:microbit-more/pxt-mbit-more-v2"
     },
     "files": [
         "README.md",

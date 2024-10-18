@@ -1,16 +1,3 @@
-
-/**
-* Use this file to define custom functions and blocks.
-* Read more at https://makecode.microbit.org/blocks/custom
-*/
-
-enum MyEnum {
-    //% block="one-1"
-    One,
-    //% block="two-2"
-    Two
-}
-
 /**
  * Custom blocks
  * icon: a Unicode identifier for an icon from the Font Awesome icon set.
@@ -19,27 +6,31 @@ enum MyEnum {
 //% block="Custom Blocks"
 //% weight=100 color=#696969 icon="\uf1b2"
 namespace custom {
-    /**
-     * TODO: describe your function here
-     * @param n describe parameter here, eg: 5
-     * @param s describe parameter here, eg: "Hello"
-     * @param e describe parameter here
-     */
-    //% block
-    export function foo(n: number, s: string, e: MyEnum): void {
-        // Add code here
-    }
+    
+    const CPREFIX_DEVICE_NAME = "BBC micro:bit" // for Microbit More Editor
+    const CSERVICE_UUID_16 = 61445  // 0xF005 - scratch link
 
     /**
-     * Using C++ in addition to the simulator implementation
-     * Read more at https://makecode.com/simshim
-     * @returns device runtime
+     * set bib number.
+     * @param n bib number
      */
+    //% block="bib %bib"
+    //% blockId=set_bib_number
+    //% bib.min=0 bib.max=999 bib.defl=999
+    //% weight=100
+    //% group="More"
+    //% advanced=true
+    export function setBibNumber(bib: number): void {
+        let s = "00" + convertToText(Math.imul(Math.abs(bib), 1) % 1000)
+        s = CPREFIX_DEVICE_NAME + " #" + s.substr(s.length - 3, 3)
+        _resetAdvertising(s, CSERVICE_UUID_16)
+    }
+
     //% block
-    //% shim=custom::baz
-    export function baz(): number {
-        // implementation for simulator
-        return DEVICE_RUNTIME.RUNTIME_SIMU + 5;
+    //% shim=custom::_resetAdvertising
+    //% blockHidden=true
+    export function _resetAdvertising(gapName: string, serviceUUID: number): void {
+        console.log("_resetAdvertising: " + gapName + ", " + serviceUUID)
     }
 
 }
