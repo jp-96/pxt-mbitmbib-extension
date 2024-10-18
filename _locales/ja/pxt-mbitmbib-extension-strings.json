@@ -1,0 +1,6 @@
+{
+  "MbitMore._resetAdvertising|block": "(internal) %gapName %serviceUUID",
+  "MbitMore.setBibNumber|block": "背番号 %bib",
+  "MbitMore|block": "MbitMore",
+  "{id:category}MbitMore": "MbitMore"
+}

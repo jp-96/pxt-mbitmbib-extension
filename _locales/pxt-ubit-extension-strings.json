@@ -1,7 +1,0 @@
-{
-  "custom._resetAdvertising|block": "true",
-  "custom.setBibNumber|block": "bib %bib",
-  "custom|block": "Custom Blocks",
-  "{id:category}Custom": "Custom",
-  "{id:group}More": "More"
-}

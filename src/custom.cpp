@@ -1,7 +1,7 @@
 #include "pxt.h"
 #include "customlib.h"
 
-namespace custom
+namespace MbitMore
 {
     //%
     void _resetAdvertising(String gapName, int serviceUUID)
