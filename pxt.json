@@ -1,9 +1,10 @@
 {
-    "name": "pxt-ubit-extension",
+    "name": "pxt-mbitmbib-extension",
     "version": "0.1.0-alpha",
-    "description": "(description: this description is written in pxt.json)",
+    "description": "The device name can be changed to a numbered one for easier identification with the Microbit More editor.",
     "dependencies": {
-        "core": "*"
+        "core": "*",
+        "pxt-mbit-more-v2": "github:microbit-more/pxt-mbit-more-v2"
     },
     "files": [
         "README.md",
@@ -12,7 +13,9 @@
         "src/custom.ts",
         "src/custom.cpp",
         "src/customlib.h",
-        "src/customlib.cpp"
+        "src/customlib.cpp",
+        "_locales/ja/pxt-mbitmbib-extension-jsdoc-strings.json",
+        "_locales/ja/pxt-mbitmbib-extension-strings.json"
     ],
     "testFiles": [
         "test/test.ts"

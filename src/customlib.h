@@ -5,32 +5,7 @@
 
 namespace customlib
 {
-
-    /**
-     * device runtime
-     */
-    enum DEVICE_RUNTIME
-    {
-        /**
-         * simulator
-         */
-        RUNTIME_SIMU = 0,
-        /**
-         * dal - micro:bit v1
-         */
-        RUNTIME_DAL = 1,
-        /**
-         * codal - micro:bit v2
-         */
-        RUNTIME_CODAL = 2,
-    };
-
-    /**
-     * get device runtime
-     * @returns DEVICE_RUNTIME
-    */
-    DEVICE_RUNTIME getDeviceRuntime();
-
+    void resetAdvertising(const ManagedString &gapName, const uint16_t serviceUUID);
 }
 
 #endif // #ifndef CUSTOMLIB_H
